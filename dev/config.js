@@ -18,6 +18,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
     "jsx": "github:floatdrop/plugin-jsx@1.2.1",
+    "prop-types": "npm:prop-types@15.5.10",
     "react": "npm:react@15.2.1",
     "react-dom": "npm:react-dom@15.2.1",
     "github:floatdrop/plugin-jsx@1.2.1": {
@@ -312,14 +313,14 @@ System.config({
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0"
     },
-    "npm:fbjs@0.8.3": {
+    "npm:fbjs@0.8.12": {
       "core-js": "npm:core-js@1.2.7",
-      "immutable": "npm:immutable@3.8.1",
       "isomorphic-fetch": "npm:isomorphic-fetch@2.2.1",
-      "loose-envify": "npm:loose-envify@1.2.0",
+      "loose-envify": "npm:loose-envify@1.3.1",
       "object-assign": "npm:object-assign@4.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "promise": "npm:promise@7.1.1",
+      "setimmediate": "npm:setimmediate@1.0.5",
       "ua-parser-js": "npm:ua-parser-js@0.7.10"
     },
     "npm:glob@5.0.15": {
@@ -379,9 +380,9 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "source-map": "npm:source-map@0.1.31"
     },
-    "npm:loose-envify@1.2.0": {
+    "npm:loose-envify@1.3.1": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "js-tokens": "npm:js-tokens@1.0.3",
+      "js-tokens": "npm:js-tokens@3.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -457,6 +458,11 @@ System.config({
       "asap": "npm:asap@2.0.4",
       "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
+    "npm:prop-types@15.5.10": {
+      "fbjs": "npm:fbjs@0.8.12",
+      "loose-envify": "npm:loose-envify@1.3.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:public-encrypt@4.0.0": {
       "bn.js": "npm:bn.js@4.11.5",
       "browserify-rsa": "npm:browserify-rsa@4.0.1",
@@ -487,8 +493,8 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:react@15.2.1": {
-      "fbjs": "npm:fbjs@0.8.3",
-      "loose-envify": "npm:loose-envify@1.2.0",
+      "fbjs": "npm:fbjs@0.8.12",
+      "loose-envify": "npm:loose-envify@1.3.1",
       "object-assign": "npm:object-assign@4.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -525,6 +531,9 @@ System.config({
     },
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:setimmediate@1.0.5": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:sha.js@2.4.5": {

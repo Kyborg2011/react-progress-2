@@ -1,21 +1,24 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-let Component = React.createClass({
-    count: 0,
-    runningTimerId: null,
-    hidingTimerId: null,
+class Component extends React.Component {
+    constructor( props ) {
+        super( props );
 
-    getInitialState() {
-        return {
-            state: 'hidden'
-        }
-    },
+        this.state = {
+            state: 'hidden',
+        };
 
-    getDefaultProps() {
-        return {
-            cls: ''
-        }
-    },
+        this.count = 0;
+        this.runningTimerId = null;
+        this.hidingTimerId = null;
+
+        this.show = this.show.bind(this);
+        this.hide = this.hide.bind(this);
+        this.hideAll = this.hideAll.bind(this);
+        this.toHiddenState = this.toHiddenState.bind(this);
+        this.isVisible = this.isVisible.bind(this);
+    }
 
     render() {
         let cls = `loader-60devs ${this.props.cls}`
@@ -25,11 +28,11 @@ let Component = React.createClass({
                 <div className="loader-60devs-progress"></div>
             </div>
         )
-    },
+    }
 
     show() {
         if(++ this.count > 1)
-            return 
+            return
 
         clearTimeout(this.hidingTimerId)
 
@@ -43,37 +46,37 @@ let Component = React.createClass({
         element.setAttribute('data-state', '')
         element.offsetHeight
         element.setAttribute('data-state', 'running')
-    },
+    }
 
     hide() {
         if(-- this.count > 0)
-            return 
+            return
 
         this.element.setAttribute('data-state', 'finishing')
         this.hidingTimerId = setTimeout(this.toHiddenState, 500)
-    },
+    }
 
     hideAll() {
         this.count = 1
         this.hide()
-    },
+    }
 
     toHiddenState() {
         this.element.setAttribute('data-state', 'hidden')
-    },
+    }
 
     componentWillMount() {
         Component.instance = this
-    },
+    }
 
     componentWillUnmount() {
         delete Component.instance
-    },
+    }
 
     isVisible() {
         return this.element.getAttribute('data-state') != 'hidden'
     }
-})
+}
 
 export default {
     Component: Component,
